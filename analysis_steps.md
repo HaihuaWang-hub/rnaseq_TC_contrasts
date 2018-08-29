@@ -43,10 +43,10 @@ qsub -cwd -N cam_splinetime -l h_vmem=4G -q all.q /home/grabowsky/tools/workflow
 `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC`
 #### General DE
 Any difference between MT5 and 167; MANY genes
-`Camelina_TC_DESeq2_general_genes.txt`
-* Gene names and p-values
-`Camelina_TC_DESeq2_general_full_mat.txt`
-* Gene names, p-values, and a few other values
+* `Camelina_TC_DESeq2_general_genes.txt`
+  * Gene names and p-values
+* `Camelina_TC_DESeq2_general_full_mat.txt`
+  * Gene names, p-values, and a few other values
 ## maSigPro
 ### Overview
 #### My Notes
