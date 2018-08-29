@@ -1,8 +1,8 @@
-# Steps for Camelina seed Time Course Experiment
-## Remove Bad Samples from Count Data
-```
-Rscript --vanilla /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/remove_bad_samp_counts.r
-```
+# Steps and Notes for DE portion of analysis of Camelina seed Time Course Experiment
+## Outline
+* Identify DE genes using DESeq2, maSigPro, and splineTimeR R packages
+* Generate lists of DE genes that combine results from the different packages
+based on the underlying models
 ## DESeq2
 ### Overview
 #### My Notes
@@ -47,6 +47,14 @@ Any difference between MT5 and 167; MANY genes
   * Gene names and p-values
 * `Camelina_TC_DESeq2_general_full_mat.txt`
   * Gene names, p-values, and a few other values
+#### Differential Response Between Lines Across Time
+Fewer genes
+* `Camelina_TC_DESeq2_TC_genes.txt`
+  * Gene names and p-values
+* `Camelina_TC_DESeq2_TC_var_lfc.txt`
+  * Gene names and estimated log2 fold change for each of the parameters in the GLM (except TimeVsTime comparisons); this can be used for clustering genes based on their estimated response at/to different parameters
+* `Camelina_TC_DESeq2_TC_full_mat.txt`
+  * Gene names, p-values, estimated log2 fold change, and other values
 ## maSigPro
 ### Overview
 #### My Notes
@@ -76,6 +84,16 @@ Returns 3 files:
 ```
 qsub -cwd -N cam_masigpro -l h_vmem=4G -q all.q /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/sh_scripts/run_maSigPro.sh
 ```
+### Output Files
+#### File Directory
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC`
+#### DE Files
+* `Camelina_TC_maSigPro_167_DE_genes.txt`
+  * Gene names and p-values for overall difference across all parameters
+* `Camelina_TC_maSigPro_167_DE_betas.txt`
+  * Gene names and estimated Betas for the different parameters in the model; this can be used for clustering genes
+* `Camelina_TC_maSigPro_167_DE_full_mat.txt`
+  * Gene name, overall p-value, R^2, and beta and p-value for each parameter for the significant genes
 ## splineTimeR
 ### Overview
 #### My Notes
@@ -109,4 +127,28 @@ Returns two groups of three files
 ```
 qsub -cwd -N cam_splinetime -l h_vmem=4G -q all.q /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/sh_scripts/run_splineTimeR_2conditions.sh
 ```
-
+### Output Files
+#### File Directory
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC`
+#### General DE
+Many Genes
+* `Camelina_TC_splineTimeR_withIntercept_genes.txt`
+  * Genes and p-values
+* `Camelina_TC_splineTimeR_withIntercept_paramVals.txt`
+  * Gene names and spline parameter values for the significant genes. 
+This can be used for clustering genes based on their modeled response across 
+conditions
+* `Camelina_TC_splineTimeR_withIntercept_full_mat.txt`
+  * contains the gene name, parameter values, average expression, F value, 
+overall p-value, and multiple testing-adjusted p-value for the significant genes
+#### Different response across time
+Few Genes
+* `Camelina_TC_splineTimeR_noIntercept_genes.txt`
+  * Genes and p-values
+* `Camelina_TC_splineTimeR_noIntercept_paramVals.txt`
+  * Gene names and spline parameter values for the significant genes. 
+This can be used for clustering genes based on their modeled response across 
+conditions
+* `Camelina_TC_splineTimeR_noIntercept_full_mat.txt`
+  * contains the gene name, parameter values, average expression, F value, 
+overall p-value, and multiple testing-adjusted p-value for the significant genes
