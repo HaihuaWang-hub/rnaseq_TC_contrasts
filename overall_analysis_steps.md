@@ -20,16 +20,6 @@ are based on the models used to identify DE genes
   * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/DE_analysis_notes.md
 * On cluster
   * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/DE_analysis_notes.md
-## Homology to Arabidopsis and GO Assignment
-### Goals
-* Identify top homologous Arabidopsis genes based on peptide allignment
-* Assign GO terms to Camelina genes based on GO terms of top Arabidopsis
-homolog
-### Notes about Homology and GO Assignment
-* On GitHub
-  * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/At_homology_and_GO_annotation.md
-* On cluster
-  * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/At_homology_and_GO_annotation.md
 ## Generate Lists of DE Genes
 ### Overview
 Generate 3 DE gene lists that fall into two categories:
@@ -74,4 +64,20 @@ splineTimerR-General
   * 335 (77.4%) overlap with Gene Set 1
   * 101 (23.3%) overlap with Gene Set 2
   * 51 (11.8%) not found in other gene sets
+## Homology to Arabidopsis and GO Assignment
+### Goals
+* Identify top homologous Arabidopsis genes based on peptide allignment
+* Assign GO terms to Camelina genes based on GO terms of top Arabidopsis
+homolog
+### Notes about Homology and GO Assignment
+* On GitHub
+  * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/At_homology_and_GO_enrichment.md
+* On cluster
+  * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/At_homology_and_GO_enrichment.md
+## GO Enrichment
+### Goals
+* Assign GO terms to Camelina genes based on closest Arabidopsis homolog
+* Find enriched GO Terms in each of the DE Gene Lists
+* Get genes for enriched GO Terms related to lipid metabolism and seed 
+development
 

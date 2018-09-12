@@ -7,6 +7,7 @@ splinetime_tc <- read.table(splinetime_tc_file, header = T, stringsAsFactors = F
 cs_to_at_file <- '/home/t4c1/WORK/grabowsk/data/Camelina_peptide_allign/Cam_to_AT_gene_table_v2.0.txt'
 cs_to_at <- read.table(cs_to_at_file, header = T, stringsAsFactors = F, 
   sep = '\t')
+# cs_to_at <- read.table(cs_to_at_file, header = T, stringsAsFactors = F, sep = '\t', quote = '@', comment.char = '!')
 # GO Info
 cs_go_file <- '/home/t4c1/WORK/grabowsk/data/Camelina_peptide_allign/Cam_GO_table.txt'
 # Count data
