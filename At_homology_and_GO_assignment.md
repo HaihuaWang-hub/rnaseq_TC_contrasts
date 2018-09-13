@@ -5,7 +5,6 @@ Camelina genes
 2) Assign top Arabidopsis matches from alignments to Camelina genes
 3) Assign GO terms to Camelina genes using GO terms assigned to homologous
 Arabidopsis genes
-4) Generate GO enrichment lists for the different DE Gene lists
 ## Align Camelina Pepetide Sequences to Arabidopsis
 ### Resources
 * I use the program `diamond` to quickly use BLASTP for many genes
@@ -46,17 +45,4 @@ Rscript --vanilla /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/
 ```
 Rscript --vanilla /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/assign_At_common_name.r
 ```
-## GO Enrichment
-### Workflow
-#### Generate GO Enrichment lists
-```
-Rscript --vanilla /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/DE_GO_enrichment.r
-```
-### Location of Lists
-#### General DE GO Enrichment
-`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_general_DE_GO_enrich.txt`
-#### DESeq2 Time Course GO Enrichment
-`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_DESeq2_TC_GO_enrich.txt`
-#### splineTimeR Time-related GO Enrichment
-`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_splineTimeR_TC_GO_enrich.txt`
 

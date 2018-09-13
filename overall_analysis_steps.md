@@ -1,4 +1,5 @@
 # Steps for Camelina seed Time Course Experiment
+
 ## Data filtering
 ### Remove Bad Samples from Count Data
 Two libraries cluster together rather than with their same-sample/same-time 
@@ -7,6 +8,19 @@ files
 ```
 Rscript --vanilla /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/remove_bad_samp_counts.r
 ```
+## Homology to Arabidopsis and GO Assignment
+### Goals
+* Identify top homologous Arabidopsis genes based on peptide allignment
+  * At genes important when making lists of DE genes for Cs
+* Assign GO terms to Camelina genes based on GO terms of top Arabidopsis
+homolog
+  * Will be used for GO enrichment
+### Notes about Homology and GO Assignment
+* On GitHub
+  * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/At_homology_and_GO_assignment.md
+* On cluster
+  * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/At_homology_and_GO_assignment.md
+
 ## DE Analysis
 ### Goals
 * Identify Differentially Expressed (DE) genes using 3 R packages: DESeq2, 
@@ -20,8 +34,8 @@ are based on the models used to identify DE genes
   * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/DE_analysis_notes.md
 * On cluster
   * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/DE_analysis_notes.md
-## Generate Lists of DE Genes
-### Overview
+### Generate Lists of DE Genes
+#### Overview
 Generate 3 DE gene lists that fall into two categories:
 1. Overall/global DE - DE across entire experiment
   * List 1: General DE
@@ -32,14 +46,14 @@ splineTimerR-General
     * Sample x Time interactions from DESeq2
   * List 3: Different Changes in Expression Through Time
     * splineTimeR spline-related results
-### Generate Gene Lists
-#### Script to Make List 1: General DE
+#### Generate Gene Lists
+##### Script to Make List 1: General DE
 * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/make_General_DE_List1.r
-#### Script to Make List 2: Time-specific DE Genes
+##### Script to Make List 2: Time-specific DE Genes
 * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/make_timespecific_DE_List2.r
-#### Script to Make List 3: Different Response Across Time
+##### Script to Make List 3: Different Response Across Time
 * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/make_different_response_DE_List3.r
-### Location of Gene Lists
+#### Location of Gene Lists
 1. List 1: General DE
   * /home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Csa_suneson_TC_GeneList1_DE_genes_v2.0.txt
 2. List 2: Time-specific DE
@@ -64,20 +78,12 @@ splineTimerR-General
   * 335 (77.4%) overlap with Gene Set 1
   * 101 (23.3%) overlap with Gene Set 2
   * 51 (11.8%) not found in other gene sets
-## Homology to Arabidopsis and GO Assignment
-### Goals
-* Identify top homologous Arabidopsis genes based on peptide allignment
-* Assign GO terms to Camelina genes based on GO terms of top Arabidopsis
-homolog
-### Notes about Homology and GO Assignment
-* On GitHub
-  * https://github.com/grabowsp/rnaseq_TC_contrasts/blob/master/At_homology_and_GO_enrichment.md
-* On cluster
-  * /home/grabowsky/tools/workflows/rnaseq_TC_contrasts/At_homology_and_GO_enrichment.md
+
 ## GO Enrichment
 ### Goals
-* Assign GO terms to Camelina genes based on closest Arabidopsis homolog
 * Find enriched GO Terms in each of the DE Gene Lists
 * Get genes for enriched GO Terms related to lipid metabolism and seed 
 development
+* Generate figures to summarize/explain the GO enrichment results
+
 
