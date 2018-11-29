@@ -85,5 +85,30 @@ splineTimerR-General
 * Get genes for enriched GO Terms related to lipid metabolism and seed 
 development
 * Generate figures to summarize/explain the GO enrichment results
+### Summary
+`/home/grabowsky/tools/workflows/rnaseq_TC_contrasts/GO_enrichment.md`
+### Workflow Scripts and Files
+#### GO Enrichment Script
+`/home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/DE_GO_enrichment.r`
+#### GO Enrichment Analysis and Figures Script
+`/home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_scripts/GO_result_analysis.r`
+##### Custom R Functions for GO Analysis and Figures
+`/home/grabowsky/tools/workflows/rnaseq_TC_contrasts/r_tools/GO_analysis_functions.r` 
+
+### GO Term Enrichment Lists
+#### General DE GO Enrichment
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_general_DE_GO_enrich.txt`
+#### DESeq2 Time Course GO Enrichment
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_DESeq2_TC_GO_enrich.txt`
+#### splineTimeR Time-related GO Enrichment
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/Camelina_TC_splineTimeR_TC_GO_enrich.txt`
+
+### GO Enrichment Barplots
+#### General DE GO Enrichement Barplot
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/figs/gen_results_GO_barplot.pdf`
+#### DESeq2 Time Course GO Enrichment Barplot
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/figs/time_results_GO_barplot.pdf`
+#### splineTimeR Time-related GO Enrichement Barplot
+`/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/figs/spline_results_GO_barplot.pdf`
 
 

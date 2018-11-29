@@ -1,4 +1,5 @@
-# Steps and Notes for DE portion of analysis of Camelina seed Time Course Experiment
+# Steps and Notes for DE portion of analysis of Camelina seed Time 
+#   Course Experiment
 ## Outline
 * Identify DE genes using DESeq2, maSigPro, and splineTimeR R packages
 * Generate lists of DE genes that combine results from the different packages
