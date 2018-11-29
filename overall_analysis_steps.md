@@ -111,4 +111,19 @@ development
 #### splineTimeR Time-related GO Enrichement Barplot
 `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/figs/spline_results_GO_barplot.pdf`
 
+## Figures for Manuscript Revision
+### Summary
+* Reviewer asked for a couple figures related to the RNA-seq analysis:
+  * PCA plot of the RNA-seq libraries
+  * Heatmap of expression of RNA-seq DE genes
+### Notes
+* `/home/grabowsky/tools/workflows/rnaseq_TC_contrasts/manuscript_revision_figures.md`
+### Figures
+#### PCA
+* `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/manuscript_figs/PCA_vst.pdf`
+#### Heatmaps
+* `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/manuscript_figs/GeneList1_heatmap.pdf`
+* `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/manuscript_figs/GeneList2_heatmap.pdf`
+* `/home/t4c1/WORK/grabowsk/data/Camelina_suneson_seed_TC/manuscript_figs/GeneList3_heatmap.pdf`
+
 
